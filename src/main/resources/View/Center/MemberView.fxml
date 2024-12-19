@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="st.librarymanagement.Controller.Center.MemberController"
+            prefHeight="720.0" prefWidth="1280.0">
+    <left>
+        <VBox prefHeight="720.0" prefWidth="173.0">
+            <ImageView fitHeight="84.0" fitWidth="205.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnDashboard" prefHeight="28.0" prefWidth="146.0" style="-fx-background-color: transparent; -fx-text-fill: #00f7fd;" styleClass="sidebar-button" text="DashBoard">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" />
+                </graphic>
+            </Button>
+            <Button fx:id="btnBook" prefHeight="28.0" prefWidth="147.0" style="-fx-background-color: transparent; -fx-text-fill: #00f7fd;" styleClass="sidebar-button" text="Book Manage">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" />
+                </graphic>
+            </Button>
+            <Button fx:id="btnBorrow" prefHeight="28.0" prefWidth="145.0" style="-fx-background-color: transparent; -fx-text-fill: #00f7fd;" styleClass="sidebar-button" text="Loan Manage">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" />
+                </graphic>
+            </Button>
+            <Button fx:id="btnMember" style="-fx-background-color: transparent; -fx-text-fill: #00f7fd;" styleClass="sidebar-button" text="Member Manage">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" />
+                </graphic>
+            </Button>
+            <Button fx:id="btnAuthor" style="-fx-background-color: transparent; -fx-text-fill: #00f7fd;" styleClass="sidebar-button" text="Author Manage">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" />
+                </graphic>
+            </Button>
+            <Button fx:id="btnPublisher" style="-fx-background-color: transparent; -fx-text-fill: #00f7fd;" styleClass="sidebar-button" text="Publisher Manage">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" />
+                </graphic>
+            </Button>
+            <Button fx:id="btnFine" style="-fx-background-color: transparent; -fx-text-fill: #00f7fd;" styleClass="sidebar-button" text="Fine Manage">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" />
+                </graphic>
+            </Button>
+        </VBox>
+
+    </left>
+    <center>
+        <AnchorPane>
+            <VBox>
+                <HBox alignment="CENTER" prefHeight="120.0" prefWidth="821.0" spacing="10" styleClass="full-search">
+                    <Label prefHeight="120.0" prefWidth="180.0" styleClass="Management-Label" text="Book Management" />
+                    <TextField fx:id="txtSearch" prefHeight="39.0" prefWidth="380.0"  />
+                    <Button fx:id="btnAdd" mnemonicParsing="false" prefHeight="38.0" prefWidth="47.0" text="New" />
+                </HBox>
+                <HBox>
+                    <ChoiceBox fx:id="statusFilter"/>
+                </HBox>
+                <TableView fx:id="table" prefHeight="641.0" prefWidth="823.0">
+                    <columns>
+                        <TableColumn fx:id="colId" text="ID" />
+                        <TableColumn fx:id="name" text="Name" />
+                        <TableColumn fx:id="email" text="Email" />
+                        <TableColumn fx:id="phone" text="Phone" />
+                        <TableColumn fx:id="joinDate" text="Join Date" />
+                        <TableColumn fx:id="status" text="Status" />
+                    </columns>
+                </TableView>
+                <Pagination fx:id="pagination" />
+            </VBox>
+        </AnchorPane>
+    </center>
+    <right>
+        <AnchorPane fx:id="rightPane"/>
+    </right>
+</BorderPane>

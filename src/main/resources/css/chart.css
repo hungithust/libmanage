@@ -1,0 +1,24 @@
+/* Màu nền cho biểu đồ */
+.chart {
+    -fx-background-color: #f4f4f4; /* Màu nền nhạt */
+}
+
+/* Màu sắc cho các cột */
+.default-color0.chart-bar {
+    -fx-bar-fill: #ff7f50; /* Cam cho Series 1 */
+}
+
+.default-color1.chart-bar {
+    -fx-bar-fill: #87cefa; /* Xanh nhạt cho Series 2 */
+}
+
+.default-color2.chart-bar {
+    -fx-bar-fill: #32cd32; /* Xanh lá cây cho Series 3 */
+}
+
+/* Tùy chỉnh trục x và trục y */
+.axis {
+    -fx-tick-label-fill: #333333; /* Màu chữ trên trục */
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" prefHeight="720.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="st.librarymanagement.Controller.Center.BookController">
+    <left>
+        <VBox prefHeight="720.0" prefWidth="173.0">
+            <ImageView fitHeight="84.0" fitWidth="205.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnDashboard" prefHeight="28.0" prefWidth="146.0" style="-fx-background-color: transparent; -fx-text-fill: #00f7fd;" styleClass="sidebar-button" text="DashBoard">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" />
+                </graphic>
+            </Button>
+            <Button fx:id="btnBook" prefHeight="28.0" prefWidth="147.0" style="-fx-background-color: transparent;              -fx-text-fill: #00f7fd;" styleClass="sidebar-button" text="Book Manage">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" />
+                </graphic>
+            </Button>
+            <Button fx:id="btnBorrow" prefHeight="28.0" prefWidth="145.0" style="-fx-background-color: transparent;             -fx-text-fill: #00f7fd;" styleClass="sidebar-button" text="Loan Manage">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" />
+                </graphic>
+            </Button>
+            <Button fx:id="btnMember" style="-fx-background-color: transparent; -fx-text-fill: #00f7fd;" styleClass="sidebar-button" text="Member Manage">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" />
+                </graphic>
+            </Button>
+            <Button fx:id="btnAuthor" style="-fx-background-color: transparent; -fx-text-fill: #00f7fd;" styleClass="sidebar-button" text="Author Manage">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" />
+                </graphic>
+            </Button>
+            <Button fx:id="btnPublisher" style="-fx-background-color: transparent; -fx-text-fill: #00f7fd;" styleClass="sidebar-button" text="Publisher Manage">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" />
+                </graphic>
+            </Button>
+            <Button fx:id="btnFine" style="-fx-background-color: transparent; -fx-text-fill: #00f7fd;" styleClass="sidebar-button" text="Fine Manage">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" />
+                </graphic>
+            </Button>
+        </VBox>
+    </left>
+    <center>
+        <AnchorPane>
+            <VBox>
+                <HBox alignment="CENTER" prefHeight="120.0" prefWidth="821.0" spacing="10" styleClass="full-search">
+                    <Label prefHeight="120.0" prefWidth="180.0" styleClass="Management-Label" text="Book Management" />
+                    <TextField fx:id="txtSearch" prefHeight="39.0" prefWidth="380.0" promptText="Search some books ..." styleClass="search-box" />
+                    <Button fx:id="btnAdd" mnemonicParsing="false" prefHeight="38.0" prefWidth="47.0" styleClass="search-and-new" text="New" />
+                </HBox>
+                <HBox>
+               <Pane prefHeight="25.0" prefWidth="701.0" />
+                    <ChoiceBox fx:id="categoryChoice" prefHeight="25.0" prefWidth="77.0">
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets></ChoiceBox>
+                    <ChoiceBox fx:id="statusChoice" prefHeight="25.0" prefWidth="74.0" />
+                </HBox>
+                <TableView fx:id="table" prefHeight="594.0" prefWidth="854.0">
+                    <columns>
+                        <TableColumn fx:id="colId" text="STT" />
+                        <TableColumn fx:id="title" text="Title" />
+                        <TableColumn fx:id="author" text="Author" />
+                        <TableColumn fx:id="publisher" text="Publisher" />
+                        <TableColumn fx:id="category" text="Category" />
+                        <TableColumn fx:id="bookAvailable" text="Available" />
+                        <TableColumn fx:id="status" text="Status" />
+                    </columns>
+                </TableView>
+                <Pagination fx:id="pagination" prefWidth="854.0" />
+            </VBox>
+        </AnchorPane>
+    </center>
+    <right>
+        <AnchorPane fx:id="rightPane" />
+    </right>
+</BorderPane>

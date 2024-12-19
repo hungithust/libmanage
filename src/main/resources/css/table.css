@@ -1,0 +1,18 @@
+.table-view {
+    -fx-background-color: transparent; /* Xóa màu nền /
+    -fx-border-color: transparent; / Xóa viền bảng /
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent; / Xóa nền tiêu đề /
+    -fx-border-color: transparent; / Xóa viền tiêu đề /
+}
+
+.table-view .table-cell {
+    -fx-border-color: transparent; / Xóa viền giữa các ô /
+    -fx-padding: 5; / Thêm padding để ô không quá sát /
+}
+
+.table-row-cell {
+    -fx-border-color: transparent; / Xóa đường kẻ giữa các hàng */
+}
